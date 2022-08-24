@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "44133F24-E67C-42A6-BE7D-B00B18A8F140"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C8B65DB-98FD-478B-B06D-D86F3C3CBF2B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestAppUITests/BaseTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6C8B65DB-98FD-478B-B06D-D86F3C3CBF2B - 1fa93ac8a478019f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestAppUITests.BaseTest.testExample() throws -&gt; ()"
+                  moduleName = "TestAppUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ihorl/Development/Portfolio/PhotosSampleTests/TestApp/TestAppUITests/BaseTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "6C8B65DB-98FD-478B-B06D-D86F3C3CBF2B - 1fa93ac8a47801fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestAppUITests.BaseTest.testExample() throws -&gt; ()"
+                  moduleName = "TestAppUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ihorl/Development/Portfolio/PhotosSampleTests/TestApp/TestAppUITests/BaseTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

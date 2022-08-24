@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "BB3970B8-9D26-4E15-87DC-6DBFF477F549",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "skippedTests" : [
+        "BaseTest"
+      ],
+      "target" : {
+        "containerPath" : "container:TestApp.xcodeproj",
+        "identifier" : "E8118E9B28B6974B00152D27",
+        "name" : "TestAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
