@@ -23,34 +23,54 @@ class AllPhotosScreen: BaseScreen {
     private lazy var iphoneAllPhotosButton = app.buttons["All Photos"]
     private lazy var iphoneRecentlyDeleted = app.staticTexts["Recently Deleted"]
     
-    private func onboardingScreenIsShown() -> Bool {
+    /**
+     Returns the visibility of the onboarding popover
+     - Returns: true if onboarding popover exists
+     */
+    private func onboardingPopoverIsShown() -> Bool {
         onboardingContinueButton.waitForExistence(timeout: 2)
     }
     
+    /**
+     This method checks for an onboarding popover and presses the Continue button if a popover exists
+     */
     func passOnboarding() {
-        if onboardingScreenIsShown() {
+        if onboardingPopoverIsShown() {
             onboardingContinueButton.tap()
         }
     }
     
     /**
-     Removes photo by it's index. IMPORTANT: Index start's with 0
+     Removes the photo by its index. IMPORTANT: Index start's with 0
      - Parameter index: index of the photo to delete, 0 is the first one
      */
     func removePhotoWithLongTap(index: Int) {
+        // I was thinking about adding a check for index to avoid index out of range,
+        // but since tests are controlled env I've skipped it
         allPhotos.element(boundBy: index).press(forDuration: 3)
         deleteFromLibraryButton.waitAndTap()
         deletionConfirmation.waitAndTap()
     }
     
+    /**
+     Opens the photo by its index. IMPORTANT: Index start's with 0
+     - Parameter index: index of the photo to open, 0 is the first one
+     */
     func openPhotoByIndex(_ index: Int) {
         allPhotos.element(boundBy: index).tap()
     }
     
+    /**
+     Returns the number of all visible photos on the screen
+     - Returns: number of photos
+     */
     func getNumberOfPhotos() -> Int {
         allPhotos.count
     }
     
+    /**
+     Delete opened image and go back to the images thumbnails list
+     */
     func deletoPhotoFromPhotoDetailsView() {
         photoViewDeleteButton.waitAndTap()
         deletionConfirmation.waitAndTap()
@@ -61,18 +81,34 @@ class AllPhotosScreen: BaseScreen {
         }
     }
     
+    /**
+     Returns the text description of the opened photo
+     - Returns: text of the photo label
+     */
     func getImageDescriptionFromDetailView() -> String {
         app.images.firstMatch.label
     }
     
+    /**
+     Search for the image with specified label text
+     - Parameter description: text to search
+     */
     func imageWithDescriptionExists(description: String) -> Bool {
         app.cells[description].waitForExistence(timeout: 2)
     }
     
+    /**
+     Returns the text description of the photo in the thumbnails list
+     - Parameter index: index of the photo to get the text from
+     - Returns: text of the photo label
+     */
     func getPhotoDescriptionByIndex(_ index: Int) -> String {
         allPhotos.element(boundBy: index).label
     }
     
+    /**
+     This method goes to the recently deleted screen and restores all deleted photos
+     */
     func restoreRemovedPhotos() {
         if UIDevice.current.userInterfaceIdiom == .pad {
             backButton.waitAndTap()
